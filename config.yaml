@@ -45,13 +45,13 @@ bars:
         "active_window",
       ]
       center: [
+        "weather",
         "clock",
         "apps",
         "microphone_2"
       ]
       right: [
         "cava",
-        "weather",
         "media",
         "brightness",
         "wallpapers",
@@ -61,7 +61,7 @@ widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "<span>\udb81\udf17</span>"
+      label: "<span></span>"
       menu_list:
       - { title: "Início", path: "~" }
       system_menu: true
@@ -168,12 +168,17 @@ widgets:
     options:
       label: "<span>{icon}</span> {temp}"
       label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-      api_key: env
-      update_interval: 600
+      api_key: "3bf4cf9a7c3f40d6b31174128242807" # Get your free API key from https://www.weatherapi.com/
+      show_alerts: true
+      tooltip: true
+      update_interval: 600 # Update interval in seconds, Min 600 seconds
       hide_decimal: true
-      location: env
+      units: "metric" # Can be 'metric' or 'imperial'
+      location: "Brasilia, DF, Brazil" # You can use "USA Los Angeles 90006" {COUNTRY CITY ZIP_CODE}, or just city.
       callbacks:
-        on_left: "toggle_label"
+        on_left: "toggle_card"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
       icons:
         sunnyDay: "\ue30d"
         clearNight: "\ue32b"

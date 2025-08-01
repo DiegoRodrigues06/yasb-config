@@ -274,7 +274,7 @@ QToolTip {
 }
 .weather-widget,
 .volume-widget {
-    padding: 0 6px;
+    padding: 0 -1px;
 }
 .weather-widget .icon {
     font-size: 18px;
