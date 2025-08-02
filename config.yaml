@@ -64,6 +64,7 @@ widgets:
       label: "<span></span>"
       menu_list:
       - { title: "Início", path: "~" }
+      - { title: "Lixeira", path: "C:\\Users\\Usuario\\.config\\yasb\\script\\Lixeira.bat" }
       system_menu: true
       power_menu: true
       blur: false
